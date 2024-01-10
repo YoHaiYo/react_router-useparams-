@@ -11,15 +11,17 @@ const Main = () => {
       <CustomText typography="h1" bold>
         메인페이지 입니다
       </CustomText>
+      <br />
       <CustomText typography="p">메인페이지는 좋죠</CustomText>
       <ListWrapper>
         {pageNum.map((e, i) => {
           return (
-            <>
-              <Link to={`/page/${e}`} key={i}>
-                <Button>페이지 {e}로 바로가기</Button>
+            <React.Fragment key={i} >
+              {/* <Link to={`/page/${e}`} key={i}> */}
+              <Link to={`http://yohayo.dothome.co.kr/yoajung/bbs/board.php?bo_table=menu&wr_id=${e}`}>
+                <Button>요아정 상품 {e}</Button>
               </Link>
-            </>
+            </React.Fragment>
           );
         })}
       </ListWrapper>

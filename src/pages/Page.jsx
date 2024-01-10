@@ -11,7 +11,7 @@ const Page = () => {
   useEffect(() => {
     // 페이지가 로드될 때마다 실행되는 효과
     axios
-      .get(`여기에_주소를_추가_해주세요${pageNumber}`)
+      .get(`http://yohayo.dothome.co.kr/yoajung/bbs/board.php?bo_table=menu&wr_id=${pageNumber}`)
       .then((res) => {
         console.log(res);
       })
@@ -26,7 +26,7 @@ const Page = () => {
         Page {pageNumber} 입니다
       </CustomText>
       <br />
-      <CustomText typography="p">{`페이지 주소는 ${pageNumber} 입니다`}</CustomText>
+      <CustomText typography="p">{`http://yohayo.dothome.co.kr/yoajung/bbs/board.php?bo_table=menu&wr_id=${pageNumber} 입니다`}</CustomText>
       <Link to={`/`}>
         <Button>뒤로가기</Button>
       </Link>
